@@ -1,0 +1,35 @@
+{
+  "name": "sales",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "sale_date": {
+      "type": "date",
+      "required": true
+    },
+    "comment": {
+      "type": "string"
+    },
+    "client_name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "details": {
+      "type": "hasMany",
+      "model": "sale_details",
+      "foreignKey": "sale_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

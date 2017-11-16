@@ -1,0 +1,51 @@
+{
+  "name": "sale_details",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "sale_id": {
+      "type": "number",
+      "required": true
+    },
+    "product_id": {
+      "type": "number",
+      "required": true
+    },
+    "price_id": {
+      "type": "number",
+      "required": true
+    },
+    "qty": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sale": {
+      "type": "belongsTo",
+      "model": "sales",
+      "foreignKey": "sale_id"
+    },
+    "product": {
+      "type": "belongsTo",
+      "model": "products",
+      "foreignKey": "product_id"
+    },
+    "price": {
+      "type": "belongsTo",
+      "model": "prices",
+      "foreignKey": "price_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

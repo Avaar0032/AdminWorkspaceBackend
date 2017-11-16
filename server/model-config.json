@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "sourcedb"
+  },
+  "AccessToken": {
+    "dataSource": "sourcedb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "sourcedb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "sourcedb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "sourcedb",
+    "public": false
+  },
+  "Message": {
+    "dataSource": null
+  },
+  "products": {
+    "dataSource": "sourcedb",
+    "public": true
+  },
+  "prices": {
+    "dataSource": "sourcedb",
+    "public": true
+  },
+  "sales": {
+    "dataSource": "sourcedb",
+    "public": true
+  },
+  "sale_details": {
+    "dataSource": "sourcedb",
+    "public": true
+  }
+}
